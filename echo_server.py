@@ -2,14 +2,14 @@ import socket
 
 class Server():
 
-    def __init__(self):
+    def __init__(self, port = 3025):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
-        self.server_socket.bind(('127.0.0.1', 3010))
+        self.server_socket.bind(('127.0.0.1', port))
+        self.server_socket.listen(1)
 
     def serve(self):
 
         while True:
-            self.server_socket.listen(1)
 
             buffer_size = 32
             conn, client_address = self.server_socket.accept()
@@ -24,12 +24,11 @@ class Server():
 
                 response.append(recieved_message)
 
-
             response = ''.join(response)
-            print response
             conn.sendall(response)
             conn.shutdown(socket.SHUT_WR)
 
 
 if __name__ == "__main__":
-    server = Server().serve()
+    server = Server()
+    server.serve()
