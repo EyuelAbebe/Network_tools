@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c446a34-619c-42db-b55a-fea80b3b1b03" name="Default" comment="" />
+    <list default="true" id="6c446a34-619c-42db-b55a-fea80b3b1b03" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Network_tools.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402353419386" ignored="false" />
@@ -351,19 +353,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/echo_server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="41" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_echo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="74" selection-start="367" selection-end="412" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/echo_server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="41" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
