@@ -1,4 +1,5 @@
 import sys
+import time
 import threading
 from echo_server import Server
 from echo_client import Client
@@ -33,7 +34,10 @@ class Echo_Client_Server(threading.Thread):
 
 if __name__ == "__main__":
     _client = Echo_Client_Server(client_send_receive, sys.argv[1])
+    time.sleep(1)
 
     while True:
+        print "+"*100
         _new_Client = ClientThread(client_send_receive, raw_input("Give me a new input to echo: ")).start()
-        print
+        time.sleep(2)
+
