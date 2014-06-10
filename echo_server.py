@@ -2,10 +2,10 @@ import socket
 
 class Server():
 
-    def __init__(self, port = 3025):
+    def __init__(self, port = 3037):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
         self.server_socket.bind(('127.0.0.1', port))
-        self.server_socket.listen(1)
+        self.server_socket.listen(2)
 
     def serve(self):
 
@@ -26,7 +26,7 @@ class Server():
 
             response = ''.join(response)
             conn.sendall(response)
-            conn.shutdown(socket.SHUT_WR)
+            conn.close()
 
 
 if __name__ == "__main__":
