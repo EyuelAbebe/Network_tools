@@ -2,43 +2,47 @@ import socket
 import sys
 
 
-def client(message):
 
-    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
-    client_socket.connect(('127.0.0.1', 3006))
+class Client:
 
-    if isinstance(message, unicode):
-        message = message.encode('utf-8')
+    def __init__(self):
+        self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
+        self.client_socket.connect(('127.0.0.1', 3010))
+        self.buffer_size = 32
 
+    def send(self, message):
+        if isinstance(message, unicode):
+            message = message.encode('utf-8')
+        done = False
+        while not done:
+            self.client_socket.send(message[:self.buffer_size])
+            message = message[self.buffer_size:]
+            # print message
 
-   # message.encode('utf-8') # encode sent message
-    client_socket.send(message)
-    client_socket.shutdown(socket.SHUT_WR)
+            if len(message) == 0:
+                self.client_socket.shutdown(socket.SHUT_WR)
+                done = True
 
-    buffer_size = 1024
-    #done = False
-    amount_received = 0
-    amount_expected = len(message)
-    recieved_message = ''
+    def receive(self):
+        received_message = []
+        done = False
+        while not done:
+            returned_message = self.client_socket.recv(self.buffer_size) #decode whatever is received
 
-    while amount_received < amount_expected:
-        returned_message = client_socket.recv(buffer_size) #decode whatever is received
-        # #print returned_message
-        # if len(recieved_message) < buffer_size:
-        #     recieved_message += returned_message
-        #     done = True
+            if not returned_message:
+                 done = True
 
-        recieved_message += returned_message
-        amount_received += len(returned_message)
-    #
-    # print message
-    # print recieved_message
-    # assert len(message) == len(recieved_message)
-    client_socket.close()
+            received_message.append(returned_message) #.decode('utf-8'))
 
-    return recieved_message #.decode('utf-8')
+        self.client_socket.close()
 
+        return ''.join(received_message)
 
 if __name__ == "__main__":
-    print client(sys.argv[1])
+    _client = Client()
+    _client.send(sys.argv[1])
+    print "-"*20
+    print _client.receive()
+
+
 

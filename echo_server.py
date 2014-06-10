@@ -1,30 +1,35 @@
 import socket
 
-def _socket():
-    server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
-    server_socket.bind(('127.0.0.1', 3006))
+class Server():
 
-    while True:
-        server_socket.listen(1)
+    def __init__(self):
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
+        self.server_socket.bind(('127.0.0.1', 3010))
 
-        buffer_size = 1024
-        conn, client_address = server_socket.accept()
+    def serve(self):
 
-        response = ''
-        done = False
-        while not done:
-            recieved_message = conn.recv(buffer_size)
-            print recieved_message
-            if len(recieved_message) < buffer_size:
-                response += recieved_message
-                done = True
+        while True:
+            self.server_socket.listen(1)
 
-            response += recieved_message
+            buffer_size = 32
+            conn, client_address = self.server_socket.accept()
 
-        print response
-        conn.sendall(response)
-        conn.shutdown(socket.SHUT_WR)
+            response = []
+            done = False
+            while not done:
+                recieved_message = conn.recv(buffer_size)
+                print recieved_message
+                if not recieved_message:
+                    done = True
+
+                response.append(recieved_message)
+
+
+            response = ''.join(response)
+            print response
+            conn.sendall(response)
+            conn.shutdown(socket.SHUT_WR)
 
 
 if __name__ == "__main__":
-    _socket()
+    server = Server().serve()
