@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c446a34-619c-42db-b55a-fea80b3b1b03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/echo_client.py" afterPath="$PROJECT_DIR$/echo_client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/echo_server.py" afterPath="$PROJECT_DIR$/echo_server.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/echo_server_client.py" afterPath="$PROJECT_DIR$/echo_server_client.py" />
     </list>
     <ignored path="Network_tools.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -10,7 +12,7 @@
     <file path="/test_echo.py" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402370987969" ignored="false" />
     <file path="/echo_client.py" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402370803413" ignored="false" />
     <file path="/echo_server.py" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402418624761" ignored="false" />
-    <file path="/echo_server_client.py" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402380417889" ignored="false" />
+    <file path="/echo_server_client.py" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402420149718" ignored="false" />
     <file path="/README.md" changelist="6c446a34-619c-42db-b55a-fea80b3b1b03" time="1402381145098" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,10 +44,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="echo_server.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="echo_server.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/echo_server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.68292683">
+            <state line="4" column="34" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="echo_server_client.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="echo_server_client.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/echo_server_client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="66" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
+            <state line="37" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.88455284">
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -100,11 +102,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/echo_server_client.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test_echo.py" />
-        <option value="$PROJECT_DIR$/echo_client.py" />
         <option value="$PROJECT_DIR$/echo_server.py" />
+        <option value="$PROJECT_DIR$/echo_client.py" />
+        <option value="$PROJECT_DIR$/echo_server_client.py" />
       </list>
     </option>
   </component>
@@ -384,15 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/echo_server_client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="66" selection-start="808" selection-end="808" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_echo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
@@ -413,8 +406,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/echo_server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="771" selection-end="771" vertical-scroll-proportion="0.68292683">
+        <state line="4" column="34" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echo_server_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="826" selection-end="826" vertical-scroll-proportion="0.88455284">
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

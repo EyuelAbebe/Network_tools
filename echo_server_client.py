@@ -35,4 +35,4 @@ if __name__ == "__main__":
     _client = Echo_Client_Server(client_send_receive, sys.argv[1])
 
     while True:
-        _newClient = Echo_Client_Server(client_send_receive, raw_input("Give me a new input to echo: "))
+        _new_Client = ClientThread(client_send_receive, raw_input("Give me a new input to echo: ")).start()
