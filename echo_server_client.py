@@ -36,3 +36,4 @@ if __name__ == "__main__":
 
     while True:
         _new_Client = ClientThread(client_send_receive, raw_input("Give me a new input to echo: ")).start()
+        print

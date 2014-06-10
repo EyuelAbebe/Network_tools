@@ -2,7 +2,7 @@ import socket
 
 class Server():
 
-    def __init__(self, port = 3040):
+    def __init__(self, port = 3041):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
         self.server_socket.bind(('127.0.0.1', port))
         self.server_socket.listen(2)

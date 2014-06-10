@@ -7,7 +7,7 @@ class Client:
 
     def __init__(self):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_IP)
-        self.client_socket.connect(('127.0.0.1', 3040))
+        self.client_socket.connect(('127.0.0.1', 3041))
         self.buffer_size = 32
 
     def send(self, message):
@@ -27,12 +27,12 @@ class Client:
         received_message = []
         done = False
         while not done:
-            returned_message = self.client_socket.recv(self.buffer_size) #decode whatever is received
+            returned_message = self.client_socket.recv(self.buffer_size)
 
             if not returned_message:
                  done = True
 
-            received_message.append(returned_message) #.decode('utf-8'))
+            received_message.append(returned_message)
 
         self.client_socket.close()
 
